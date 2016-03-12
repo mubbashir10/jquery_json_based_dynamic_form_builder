@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+	    <!--code fo meta tags-->  
+	    <meta charset="utf-8">
+		
+		<!--code fo page title-->
+	    <title>Form Builder</title>
+		
+		<!--code for stylesheets-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+	    <link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!--code for fonts-->
+	    <link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css"/>
+	    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+		
+		<!--code for scripts-->
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/script.js"></script>
+		<script>
+
+		//making an object of xmlHTTPRequest
+		var xmlhttp = new XMLHttpRequest();
+
+		//defining data file
+		var url = "data.json";
+
+		//opening file (4=request complete) and 200 (OK Response)
+		xmlhttp.onreadystatechange=function() {
+
+		    //calling display function once resource file is found and loaded		
+		    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+		        displayFunction(xmlhttp.responseText);
+		    }
+		}
+
+		//opening file using get method
+		xmlhttp.open("GET", url, true);
+
+		//sending read data
+		xmlhttp.send();
+
+
+		//generating fields
+		function displayFunction(response) {
+
+		    //converting JSON object to js object		
+		    var arr = JSON.parse(response);
+
+		    //declaring counter variable
+		    var i;
+
+		    //defining html output
+		    var out = "<li>";
+
+		    for(i = 0; i < arr.length; i++) {
+
+		    	//label
+		    	if(arr[i].type=="label"){
+
+		    		insertLabel(arr[i].name);
+
+		    	};
+		    	//text field
+		    	if(arr[i].type=="text"){
+
+		    		insertTextField(arr[i].name);
+
+		    	};
+		    	//password field
+		    	if(arr[i].type=="password"){
+
+		    		insertPasswordField(arr[i].name);
+
+		    	};
+		    	//select field
+		    	if(arr[i].type=="select"){
+
+		    		insertSelectOptions(arr[i].name);
+
+		    	};
+		    	//radio buttons
+		    	if(arr[i].type=="radioButton"){
+
+		    		insertRadioButton(arr[i].name);
+
+		    	};
+		    	//file field
+		    	if(arr[i].type=="file"){
+
+		    		insertFileField(arr[i].name);
+
+		    	};
+		    	//datalist
+		    	if(arr[i].type=="datalist"){
+
+		    		insertDataList(arr[i].name);
+
+		    	};
+		    	//number field
+		    	if(arr[i].type=="number"){
+
+		    		insertNumberField(arr[i].name);
+
+		    	};
+		    	//text area
+		    	if(arr[i].type=="textarea"){
+
+		    		insertTextArea(arr[i].name);
+
+		    	};
+		    	//keygen
+		    	if(arr[i].type=="keygen"){
+
+		    		insertKeygen(arr[i].name);
+
+		    	};
+		    	//submit button	
+		    	if(arr[i].type=="button"){
+
+		    		insertButton(arr[i].name);
+
+		    	};
+		    }
+		}
+		</script>
+
+		  <!--[if lt IE 9]>
+		  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		  <![endif]-->
+
+	</head>
+
+<body>
+
+    <!--code for main wrapper-->
+	<div class="wrapper">
+
+		<h1>Dynamic Form Builder</h1>
+		<br>
+		<p>This form is created using JSON (data.json) file dynamically.</p>
+		<br>
+		<hr>
+		<br>
+	  	<form class="formCanvas" name="untitledForm" id="untitledForm" method="post" action=""></form>
+
+	</div>
+	
+	<br><br><br>
+
+	<div class="footer"><span style="margin-left:20px;">Copyright &copy; 2014 - All rights reserved <a href="http://www.mubbashir10.com">Mubbashir10</a></span></div>
+  
+  </body>
+
+
+	</html>

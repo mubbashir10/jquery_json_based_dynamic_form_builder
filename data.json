@@ -1,0 +1,47 @@
+[
+	{
+		"name": "labelField",
+		"type": "label"
+	},
+	{
+		"name": "textField",
+		"type": "text"
+	},
+	{
+		"name": "passwordField",
+		"type": "password"
+	},
+	{
+		"name": "selectField",
+		"type": "select"
+	},
+	{
+		"name": "radioButtonField",
+		"type": "radioButton"
+	},
+	{
+		"name": "fileField",
+		"type": "file"
+	},
+	{
+		"name": "datalistField",
+		"type": "datalist"
+	},
+	{
+		"name": "numberField",
+		"type": "number"
+	},
+	{
+		"name": "textAreaField",
+		"type": "textarea"
+	},
+	{
+		"name": "keygenField",
+		"type": "keygen"
+	},
+	{
+		"name": "buttonField",
+		"type": "button"
+	}
+
+]

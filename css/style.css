@@ -1,0 +1,111 @@
+body{ 
+background: url('../images/bg.jpg');
+background-color:#e5e5e5;	
+font:14px 'Questrial', sans-serif;
+color:#191919;
+overflow
+}
+a{
+color:#636363;
+}
+a, a:visited{
+text-decoration:none;
+color:#636363;
+}
+a:hover{
+text-decoration:none;
+color:#4CAA00;
+}
+h1{
+font-size:2.5em;
+}
+h1{
+font-size:2.5em;
+}
+h2{
+font-size:1.5em;
+}
+button:hover{
+
+	cursor: pointer;
+}
+input{
+
+-moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+-webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+-o-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+-ms-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+}
+fieldset input{
+background: #f1f1f1;
+padding: 1%;
+width:50%;
+border: 1px solid #ccc;
+margin: 1% 0;
+font: 12px'Open Sans', Helvetica, Arial, sans-serif;
+-moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+-webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+-webkit-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-ms-transition: all 0.2s linear;
+-kthtml-transition: all 0.2s linear;
+transition: all 0.2s linear;
+}
+fieldset input:focus{
+background-color:rgba(250,250,250,1.0);
+border-color: #00EC21;
+-moz-box-shadow: 0 0 0 1px #e8c291 inset;
+-webkit-box-shadow: 0 0 0 1px #e8c291 inset;
+box-shadow: 0 0 0 1px #e8c291 inset;
+}
+.wrapper{
+width:50%;
+margin:5% auto;
+padding:35px;
+background:#fff;
+-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+-o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+-ms-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+.success{
+background:#4CAA00;
+border:none;
+padding:10px;
+font-size:15px;
+color:#fff;
+}
+.formControls{
+margin:1% auto;
+width:95%;
+display:none;
+}
+.primary{
+background:#0ab8f2;
+border:none;
+padding:5px;
+font-size:11px;
+color:#fff;
+margin:5px;
+}
+.createForm{
+display:none;	
+}
+.generate{
+display: none;
+}
+.footer{
+width:100%;
+background:#000;
+padding:30px 0;
+color:#c5c5c5;
+border-top:2px solid #191919;
+position:absolute;
+bottom:0px;
+display:none;
+}
+
